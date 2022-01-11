@@ -1,0 +1,7 @@
+<h1> Display</h1>
+<%= render 'static_pages/form' %>
+<% if instance_variable_defined?('@info')%>
+	<% @info.each do |photo|%>
+		<img src=<%= "http://farm#{photo['farm']}.staticflickr.com/#{photo['server']}/#{photo['id']}_#{photo['secret']}.jpg" %> />
+	<% end %>
+<% end %>

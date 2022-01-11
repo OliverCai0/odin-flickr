@@ -1,0 +1,7 @@
+<%= form_with(url: static_pages_path, method: 'get') do |form|%>
+	<div>
+		<label>Flickr ID</label>
+		<%= form.text_field :user_id%>
+	</div>
+	<%= form.submit 'Find User'%>
+<% end %>
